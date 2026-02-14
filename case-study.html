@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact | Madede</title>
+  <title>Case Study | Madede</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Fonts -->
@@ -21,7 +21,7 @@
       font-family: 'Inter', sans-serif;
     }
 
-    /* NAVIGATION */
+    /* NAV */
     nav {
       display: flex;
       justify-content: space-between;
@@ -29,11 +29,16 @@
       padding: 30px 60px;
     }
 
-    .logo {
+    .logo a {
       font-family: 'Playfair Display', serif;
       font-size: 22px;
       letter-spacing: 2px;
       color: #e6d6c1;
+      text-decoration: none;
+    }
+
+    .logo a:hover {
+      opacity: 0.8;
     }
 
     .nav-links a {
@@ -49,11 +54,12 @@
       opacity: 0.7;
     }
 
-    /* MAIN SECTION */
+    /* MAIN */
     .container {
-      max-width: 900px;
-      margin: 120px auto;
+      max-width: 1200px;
+      margin: 200px auto;
       padding: 0 60px;
+      text-align: center;
     }
 
     h1 {
@@ -63,51 +69,21 @@
       color: #e6d6c1;
     }
 
-    .contact-info {
-      font-size: 16px;
-      line-height: 1.8;
-      margin-bottom: 50px;
-    }
-
-    .contact-info p {
-      margin-bottom: 15px;
-    }
-
-    .label {
-      font-weight: 400;
-      color: #e6d6c1;
-      letter-spacing: 0.5px;
-    }
-
-    .value {
-      color: #d6c7b4;
-    }
-
-    .divider {
-      height: 1px;
-      background-color: rgba(230, 214, 193, 0.2);
-      margin: 50px 0;
-    }
-
-    .note {
-      font-size: 14px;
+    .coming-soon {
+      font-size: 18px;
+      letter-spacing: 1px;
       color: #bfae98;
-      line-height: 1.6;
     }
 
     /* Responsive */
     @media (max-width: 900px) {
       .container {
-        margin: 80px auto;
+        margin: 140px auto;
         padding: 0 40px;
       }
 
       h1 {
         font-size: 42px;
-      }
-
-      nav {
-        padding: 20px 40px;
       }
     }
   </style>
@@ -115,36 +91,24 @@
 
 <body>
 
-    <nav>
+  <nav>
     <div class="logo">
-        MADEDE
+      <a href="index.html">MADEDE</a>
     </div>
-
     <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="case-study.html">Case Study</a>
-        <a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="case-study.html">Case Study</a>
+      <a href="contact.html">Contact</a>
     </div>
-    </nav>
+  </nav>
 
   <section class="container">
-
-    <h1>Contact</h1>
-
-    <div class="contact-info">
-      <p><span class="label">Company:</span> <span class="value">Madede LLC</span></p>
-
-      <p><span class="label">Email:</span> <span class="value">qianyue.ma1203@gmail.com</span></p>
+    <h1>Case Study</h1>
+    <div class="coming-soon">
+      Content coming soon.
     </div>
-
-    <div class="divider"></div>
-
-    <div class="note">
-      For investment inquiries, strategic partnerships, or additional information regarding current and prior projects, please reach out via email. All inquiries will be handled with discretion.
-    </div>
-
   </section>
 
 </body>

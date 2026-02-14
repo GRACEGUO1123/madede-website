@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects | Madede</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #3b3229;
+      color: #d6c7b4;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 60px;
+    }
+
+    .logo a {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      letter-spacing: 2px;
+      color: #e6d6c1;
+      text-decoration: none;
+    }
+
+    .logo a:hover {
+      opacity: 0.8;
+    }
+
+    .nav-links a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #cdbda8;
+      font-size: 14px;
+      letter-spacing: 1px;
+      transition: opacity 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.7;
+    }
+
+    /* MAIN */
+    .container {
+      max-width: 1400px;
+      margin: 80px auto;
+      padding: 0 60px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px;
+      margin-bottom: 60px;
+      color: #e6d6c1;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      margin: 60px 0 30px;
+      color: #e6d6c1;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      border: 1px solid rgba(230, 214, 193, 0.2);
+      padding: 40px;
+      min-height: 180px;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      border-color: rgba(230, 214, 193, 0.5);
+      transform: translateY(-4px);
+    }
+
+    .project-title {
+      font-weight: 400;
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #e6d6c1;
+    }
+
+    .project-location {
+      font-size: 14px;
+      color: #bfae98;
+      line-height: 1.6;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .container {
+        padding: 0 40px;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">
+      MADEDE
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="case-study.html">Case Study</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <section class="container">
+    <h1>Projects</h1>
+
+    <!-- ACTIVE -->
+    <h2>Active</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="project-title">28-Home Residential Community</div>
+        <div class="project-location">Decatur, GA</div>
+      </div>
+
+      <div class="card">
+        <div class="project-title">9-Unit Townhome Development</div>
+        <div class="project-location">Intown Atlanta, GA</div>
+      </div>
+
+      <div class="card">
+        <div class="project-title">23-Home Residential Community</div>
+        <div class="project-location">Stone Mountain, GA</div>
+      </div>
+    </div>
+
+    <!-- PIPELINE -->
+    <h2>Pipeline</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="project-title">Premium Lakeside Development</div>
+        <div class="project-location">Jacksonville, GA</div>
+      </div>
+    </div>
+
+    <!-- PAST -->
+    <h2>Past</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="project-title">23-Home Residential Community</div>
+        <div class="project-location">Stone Mountain, GA</div>
+      </div>
+
+      <div class="card">
+        <div class="project-title">4-Home Residential Cluster</div>
+        <div class="project-location">Gwinnett, GA</div>
+      </div>
+
+      <div class="card">
+        <div class="project-title">Custom Single-Family Residence</div>
+        <div class="project-location">Upper Westside, GA</div>
+      </div>
+
+      <div class="card">
+        <div class="project-title">Real Estate Capital Project</div>
+        <div class="project-location">Medford, OR</div>
+      </div>
+    </div>
+
+  </section>
+
+</body>
+</html>
