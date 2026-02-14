@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MadeDe</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: white;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: url("hero.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Dark overlay */
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: absolute;
+      top: 30px;
+      left: 60px;
+      right: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 2;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      letter-spacing: 2px;
+    }
+
+    .nav-links a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+      letter-spacing: 1px;
+      transition: opacity 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.7;
+    }
+
+    /* HERO CONTENT */
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      text-align: left;
+      padding: 0 40px;
+    }
+
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 64px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #e6e6e6;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 42px;
+      }
+
+      nav {
+        left: 30px;
+        right: 30px;
+      }
+
+      .nav-links a {
+        margin-left: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+    <nav>
+      <div class="logo">MADEDE</div>
+      <div class="nav-links">
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Case Study</a>
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <h1>Madede</h1>
+      <p>
+        is a private investment vehicle dedicated to the strategic oversight of proprietary real estate assets.
+        The firm manages a diversified portfolio encompassing residential development,
+        operational management, and structured lending. By maintaining a disciplined,
+        hands-on approach, Madede focuses on long-term value creation and capital preservation within the U.S. market.
+      </p>
+    </div>
+  </section>
+
+</body>
+</html>
