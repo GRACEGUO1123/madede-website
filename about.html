@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zoe Ma | Madede</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #3b3229;
+      color: #d6c7b4;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* NAVIGATION */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 60px;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      letter-spacing: 2px;
+      color: #e6d6c1;
+    }
+
+    .nav-links a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #cdbda8;
+      font-size: 14px;
+      letter-spacing: 1px;
+      transition: opacity 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.7;
+    }
+
+    /* MAIN SECTION */
+    .container {
+      display: flex;
+      align-items: flex-start;
+      padding: 60px;
+      gap: 60px;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .profile-image img {
+      width: 380px;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .content {
+      max-width: 700px;
+    }
+
+    .content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px;
+      margin-bottom: 30px;
+      color: #e6d6c1;
+    }
+
+    .content p {
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #d6c7b4;
+    }
+
+    .contact-link {
+      margin-top: 20px;
+      display: inline-block;
+      color: #e6d6c1;
+      text-decoration: underline;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        padding: 40px;
+      }
+
+      .profile-image img {
+        width: 100%;
+      }
+
+      .content h1 {
+        font-size: 42px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">MADEDE</div>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Case Study</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <section class="container">
+    <div class="profile-image">
+      <img src="zoe.jpg" alt="Zoe Ma">
+    </div>
+
+    <div class="content">
+      <h1>Zoe Ma</h1>
+
+      <p>
+        Zoe has developed an extensive track record in the U.S. real estate investment and asset management sectors, with a career encompassing the oversight of over $6 billion in total asset value. Her experience spans both institutional platforms and private development, including roles at a Global Fortune 500 investment conglomerate and the world’s largest commercial real estate services firm.
+      </p>
+
+      <p>
+        Her institutional background includes the strategic management of a $3 billion commercial portfolio, featuring landmark office towers in Chicago and luxury hospitality assets in Manhattan. Beyond the service side, Zoe served as a key professional for a boutique merchant builder, where she contributed to the financing and execution of an $800 million residential portfolio.
+      </p>
+
+      <p>
+        Most recently, Zoe supported the strategic oversight and portfolio operations of a $8 billion multifamily portfolio for a leading U.S. private equity firm. This role involved the detailed management of 80+ assets across multi-institutional funds.
+      </p>
+
+      <p>
+        Zoe holds a Master of Science in Real Estate Development from Columbia University and a Bachelor's degree in Mathematics and Economics from the University of North Carolina at Chapel Hill.
+      </p>
+
+      <a class="contact-link" href="#">Contact for more info.</a>
+
+    </div>
+  </section>
+
+</body>
+</html>
