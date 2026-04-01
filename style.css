@@ -235,6 +235,63 @@ nav {
   color: #bfae98;
 }
 
+.content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--dim);
+  margin-bottom: 30px;
+  margin-top: -10px;
+}
+
+.content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--cream);
+  margin-top: 40px;
+  margin-bottom: 15px;
+  letter-spacing: 0.3px;
+}
+
+.case-study-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.case-study-table tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.case-study-table tr:last-child {
+  border-bottom: none;
+}
+
+.table-label {
+  padding: 14px 0 14px 0;
+  color: var(--cream);
+  font-weight: 400;
+  text-align: left;
+  width: 25%;
+  padding-right: 40px;
+}
+
+.table-value {
+  padding: 14px 0;
+  color: var(--dim);
+  text-align: left;
+}
+
+.case-divider {
+  border: none;
+  height: 1px;
+  background-color: var(--border);
+  margin: 40px 0;
+}
+
 /* ══════════════════════════════════════════════════════════════
    PROJECTS PAGE
 ══════════════════════════════════════════════════════════════ */
