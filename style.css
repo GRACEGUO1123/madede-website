@@ -256,6 +256,89 @@ nav {
   text-align: left;
 }
 
+/* ── CONTACT FORM ── */
+.contact-form {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 8px;
+}
+
+.form-input {
+  width: 100%;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  color: var(--cream);
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  padding: 12px 16px;
+  outline: none;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.form-input::placeholder {
+  color: var(--dimmer);
+}
+
+.form-input:focus {
+  border-color: var(--gold-dim);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 140px;
+  line-height: 1.7;
+}
+
+.form-submit {
+  margin-top: 8px;
+  background: transparent;
+  border: 1px solid var(--gold-dim);
+  color: var(--gold);
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 13px 36px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.form-submit:hover {
+  background: var(--gold-dim);
+  color: var(--bg);
+}
+
+.form-submit:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.form-status {
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  min-height: 20px;
+}
+
+.form-status--ok  { color: #8abf8a; }
+.form-status--err { color: #c87e7e; }
+
 /* ── CASE STUDY PAGE ── */
 .coming-soon {
   font-size: 18px;

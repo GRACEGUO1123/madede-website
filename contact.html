@@ -36,18 +36,84 @@
 
     <div class="contact-info">
       <p><span class="label">Company:</span> <span class="value">Madede LLC</span></p>
-
       <p><span class="label">Email:</span> <span class="value">madede@yeah.net</span></p>
     </div>
 
     <div class="divider"></div>
 
     <div class="note">
-      For investment inquiries, strategic partnerships, or additional information regarding current and prior projects, please reach out via email. All inquiries will be handled with discretion.
+      For investment inquiries, strategic partnerships, or additional information regarding current and prior projects, please reach out via the form below. All inquiries will be handled with discretion.
     </div>
+
+    <!-- CONTACT FORM — powered by Formspree (formspree.io)
+         Replace YOUR_FORM_ID with the ID from your Formspree dashboard -->
+    <form class="contact-form" id="contact-form">
+      <input type="hidden" name="_subject" value="New inquiry via Madede website">
+
+      <div class="form-group">
+        <label class="form-label" for="cf-name">Name</label>
+        <input class="form-input" type="text" id="cf-name" name="name" placeholder="Your name" required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="cf-email">Email</label>
+        <input class="form-input" type="email" id="cf-email" name="email" placeholder="your@email.com" required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="cf-message">Message</label>
+        <textarea class="form-input form-textarea" id="cf-message" name="message" placeholder="Your message…" rows="6" required></textarea>
+      </div>
+
+      <div class="form-status" id="form-status"></div>
+
+      <button class="form-submit" type="submit">
+        <span class="submit-label">Send Message</span>
+        <span class="submit-sending" style="display:none">Sending…</span>
+      </button>
+    </form>
 
   </section>
 
 <script src="main.js"></script>
+<script>
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+
+  const form    = document.getElementById('contact-form');
+  const status  = document.getElementById('form-status');
+  const label   = form.querySelector('.submit-label');
+  const sending = form.querySelector('.submit-sending');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    label.style.display   = 'none';
+    sending.style.display = 'inline';
+    status.textContent    = '';
+    status.className      = 'form-status';
+
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method:  'POST',
+        headers: { 'Accept': 'application/json' },
+        body:    new FormData(form),
+      });
+
+      if (res.ok) {
+        status.textContent  = 'Your message has been sent. We will be in touch shortly.';
+        status.classList.add('form-status--ok');
+        form.reset();
+      } else {
+        const data = await res.json();
+        throw new Error((data.errors || []).map(x => x.message).join(', ') || 'Submission failed.');
+      }
+    } catch (err) {
+      status.textContent  = err.message || 'Something went wrong. Please try again.';
+      status.classList.add('form-status--err');
+    } finally {
+      label.style.display   = 'inline';
+      sending.style.display = 'none';
+    }
+  });
+</script>
 </body>
 </html>
