@@ -790,10 +790,70 @@ nav {
 @media (max-width: 600px) {
   nav {
     padding: 16px 20px;
+    position: relative;
+  }
+
+  /* show hamburger, hide inline links */
+  .nav-hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 0 20px;
+    z-index: 100;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 14px 0;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    margin-left: 0 !important;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  /* hero nav mobile */
+  .hero nav {
+    left: 0;
+    right: 0;
+    padding: 16px 20px;
+  }
+
+  .hero .nav-links {
+    background: rgba(43, 37, 32, 0.97);
   }
 
   .hero-content {
     padding: 0 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-text {
+    left: 20px;
+    bottom: 24px;
+  }
+
+  .hero-title {
+    font-size: 24px;
+    max-width: 100%;
   }
 
   .container {
