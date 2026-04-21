@@ -19,16 +19,12 @@
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
+    <a href="projects.html" class="active">Projects</a>
     <a href="case-study.html">Case Study</a>
     <a href="contact.html">Contact</a>
   </div>
 </nav>
 
-<!-- ══════════════════════════════════
-     VIEW: PROJECTS LIST
-══════════════════════════════════ -->
-<div class="view active" id="view-list">
 <div class="list-wrap">
   <h1>Projects</h1>
 
@@ -37,8 +33,7 @@
     <div class="section-head">Active</div>
     <div class="card-grid">
 
-      <!-- Creekside -->
-      <div class="card-img" onclick="showDetail('creekside')">
+      <a class="card-img" href="projects/creekside.html">
         <div class="card-cover-wrap">
           <img class="card-cover" src="assets/creekside/hero.jpg" alt=""/>
           <div class="card-fade"></div>
@@ -48,10 +43,9 @@
           <div class="c-title">Residential Subdivision I</div>
           <div class="c-sub">Metro Atlanta, GA &nbsp;·&nbsp; 28 Units</div>
         </div>
-      </div>
+      </a>
 
-      <!-- 252 -->
-      <div class="card-img" onclick="showDetail('252')">
+      <a class="card-img" href="projects/252.html">
         <div class="card-cover-wrap">
           <img class="card-cover" src="assets/252/hero.jpg" alt=""/>
           <div class="card-fade"></div>
@@ -61,10 +55,9 @@
           <div class="c-title">Townhome Development</div>
           <div class="c-sub">Intown Atlanta, GA &nbsp;·&nbsp; 9 Units</div>
         </div>
-      </div>
+      </a>
 
-      <!-- 522 -->
-      <div class="card-img" onclick="showDetail('522')">
+      <a class="card-img" href="projects/522.html">
         <div class="card-cover-wrap">
           <img class="card-cover" src="assets/522/hero.jpg" alt=""/>
           <div class="card-fade"></div>
@@ -74,10 +67,9 @@
           <div class="c-title">Residential Subdivision II</div>
           <div class="c-sub">DeKalb County, GA &nbsp;·&nbsp; 23 Units</div>
         </div>
-      </div>
+      </a>
 
-      <!-- 522 Cluster -->
-      <div class="card-img" onclick="showDetail('cluster')">
+      <a class="card-img" href="projects/cluster.html">
         <div class="card-cover-wrap">
           <img class="card-cover" src="assets/cluster/hero.jpg" alt=""/>
           <div class="card-fade"></div>
@@ -87,7 +79,7 @@
           <div class="c-title">Residential Cluster</div>
           <div class="c-sub">DeKalb County, GA &nbsp;·&nbsp; 7 Units</div>
         </div>
-      </div>
+      </a>
 
     </div>
   </div>
@@ -96,11 +88,11 @@
   <div class="status-block">
     <div class="section-head">Pipeline</div>
     <div class="card-grid one">
-      <div class="card-text" onclick="showDetail('waterfront')">
+      <a class="card-text" href="projects/waterfront.html">
         <div class="c-tag">Land</div>
         <div class="c-title">Waterfront Land</div>
         <div class="c-sub">Central Georgia &nbsp;·&nbsp; 7 Lots</div>
-      </div>
+      </a>
     </div>
   </div>
 
@@ -109,8 +101,7 @@
     <div class="section-head">Past</div>
     <div class="card-grid">
 
-      <!-- Hearthstone -->
-      <div class="card-img" onclick="showDetail('hearthstone')">
+      <a class="card-img" href="projects/hearthstone.html">
         <div class="card-cover-wrap">
           <img class="card-cover" src="assets/hearthstone/hero.jpg" alt=""/>
           <div class="card-fade"></div>
@@ -120,10 +111,9 @@
           <div class="c-title">Residential Subdivision</div>
           <div class="c-sub">DeKalb County, GA &nbsp;·&nbsp; 23 Units</div>
         </div>
-      </div>
+      </a>
 
-      <!-- Sandywood -->
-      <div class="card-img" onclick="showDetail('sandywood')">
+      <a class="card-img" href="projects/sandywood.html">
         <div class="card-cover-wrap">
           <img class="card-cover" src="assets/sandywood/hero.jpg" alt=""/>
           <div class="card-fade"></div>
@@ -133,10 +123,9 @@
           <div class="c-title">Residential Development</div>
           <div class="c-sub">Gwinnett County, GA &nbsp;·&nbsp; 4 Units</div>
         </div>
-      </div>
+      </a>
 
-      <!-- 1740 -->
-      <div class="card-img" onclick="showDetail('1740')">
+      <a class="card-img" href="projects/1740.html">
         <div class="card-cover-wrap">
           <img class="card-cover" src="assets/1740/hero.jpg" alt=""/>
           <div class="card-fade"></div>
@@ -146,339 +135,19 @@
           <div class="c-title">Custom Residence</div>
           <div class="c-sub">Northwest Atlanta, GA &nbsp;·&nbsp; 1 Unit</div>
         </div>
-      </div>
+      </a>
 
-      <!-- OR -->
-      <div class="card-text" onclick="showDetail('or')">
+      <a class="card-text" href="projects/or.html">
         <div class="c-tag">Lending</div>
         <div class="c-title">Land Development</div>
         <div class="c-sub">Pacific Northwest</div>
-      </div>
+      </a>
 
     </div>
   </div>
 
 </div>
-</div><!-- /view-list -->
 
-
-<!-- ══════════════════════════════════
-     VIEW: DETAIL (populated by JS)
-══════════════════════════════════ -->
-<div class="view" id="view-detail">
-  <div class="back-btn" onclick="showList()">Back to Projects</div>
-  <div id="detail-content"></div>
-</div>
-
-
-<script>
-/* ── PROJECT DATA ── */
-const projects = {
-
-  creekside: {
-    title: 'Residential Subdivision I',
-    subtitle: 'Metro Atlanta, GA',
-    tag: 'Subdivision · Active',
-    stats: [
-      {label:'Type',    val:'Residential Subdivision'},
-      {label:'Units',   val:'28'},
-      {label:'Market',  val:'Metro Atlanta, GA'},
-      {label:'Initiated', val:'2023'},
-      {label:'Status',  val:'Active'},
-      {label:'Role',    val:'Principal Sponsor'},
-    ],
-    body: `<p>A 28-home master-planned residential subdivision within the Metro Atlanta suburban market. Madede serves as principal sponsor across the full development cycle — from land acquisition and entitlement through vertical construction and home sales.</p><p>The community is currently in active construction, with pre-sales underway.</p>`,
-    hero: 'assets/creekside/hero.jpg',
-    photos: [
-      {src:'assets/creekside/g1.jpg', cls:'ph-large ph-span2'},
-      {src:'assets/creekside/g2.jpg', cls:'ph-med'},
-      {src:'assets/creekside/g3.jpg', cls:'ph-med'},
-      {src:'assets/creekside/g4.jpg', cls:'ph-small'},
-      {src:'assets/creekside/g5.jpg', cls:'ph-small'},
-    ],
-    gridCls: 'pg-5',
-    side: [
-      {label:'Asset Class',  tags:['For-Sale Residential','Ground-Up Development']},
-      {label:'Strategy',     text:'Full-cycle equity development from land acquisition to disposition.'},
-      {label:'Geography',    text:'Metro Atlanta MSA · Southeast U.S.'},
-    ]
-  },
-
-  '252': {
-    title: 'Townhome Development',
-    subtitle: 'Intown Atlanta, GA',
-    tag: 'Townhome · Active',
-    stats: [
-      {label:'Type',      val:'Townhome Development'},
-      {label:'Units',     val:'9'},
-      {label:'Market',    val:'Intown Atlanta, GA'},
-      {label:'Initiated', val:'2025'},
-      {label:'Status',    val:'Pre-Development'},
-      {label:'Strategy',  val:'Develop-to-Hold'},
-    ],
-    body: `<p>A nine-unit townhome development in the Intown Atlanta corridor, structured as a develop-to-hold asset. The project reflects Madede's interest in urban residential and long-term income generation.</p><p>Currently in late pre-development. Groundbreaking is anticipated in the near term, with completion targeted for 2027.</p>`,
-    hero: 'assets/252/hero.jpg',
-    photos: [
-      {src:'assets/252/g1.jpg', cls:'ph-med'},
-      {src:'assets/252/g2.jpg', cls:'ph-med'},
-    ],
-    gridCls: 'pg-2',
-    side: [
-      {label:'Asset Class',  tags:['Urban Residential','Develop-to-Hold']},
-      {label:'Strategy',     text:'Long-term residential hold with direct asset management.'},
-      {label:'Geography',    text:'Intown Atlanta · Metro Atlanta MSA'},
-    ]
-  },
-
-  '522': {
-    title: 'Residential Subdivision II',
-    subtitle: 'DeKalb County, GA',
-    tag: 'Subdivision · Active',
-    stats: [
-      {label:'Type',      val:'Residential Subdivision'},
-      {label:'Units',     val:'23'},
-      {label:'Market',    val:'DeKalb County, GA'},
-      {label:'Initiated', val:'2024'},
-      {label:'Status',    val:'Land Development'},
-      {label:'Role',      val:'Principal Sponsor'},
-    ],
-    body: `<p>A 23-home residential subdivision set within an established enclave adjacent to Stone Mountain — a quiet, tucked-away location with convenient access to major commercial corridors.</p><p>Land development is underway, with vertical construction to follow upon permit completion.</p>`,
-    hero: 'assets/522/hero.jpg',
-    photos: [
-      {src:'assets/522/g1.jpg', cls:'ph-med'},
-      {src:'assets/522/g2.jpg', cls:'ph-med'},
-    ],
-    gridCls: 'pg-2',
-    side: [
-      {label:'Asset Class',  tags:['For-Sale Residential','Ground-Up Development']},
-      {label:'Strategy',     text:'Full-cycle equity development from land acquisition to disposition.'},
-      {label:'Geography',    text:'DeKalb County · Metro Atlanta MSA'},
-    ]
-  },
-
-  cluster: {
-    title: 'Residential Cluster',
-    subtitle: 'DeKalb County, GA',
-    tag: 'Residential Cluster · Active',
-    stats: [
-      {label:'Type',      val:'Single-Family Cluster'},
-      {label:'Units',     val:'7'},
-      {label:'Market',    val:'DeKalb County, GA'},
-      {label:'Initiated', val:'2024'},
-      {label:'Status',    val:'Land Development'},
-      {label:'Strategy',  val:'BTR / For-Sale (TBD)'},
-    ],
-    body: `<p>A seven-unit single-family residential cluster within the broader DeKalb County development corridor, structured for independent development.</p><p>Disposition strategy — build-to-rent or for-sale — remains under evaluation.</p>`,
-    hero: 'assets/cluster/hero.jpg',
-    photos: [],
-    gridCls: 'pg-1',
-    side: [
-      {label:'Asset Class',  tags:['Single-Family Residential']},
-      {label:'Strategy',     text:'Build-to-rent or for-sale. Disposition TBD.'},
-      {label:'Geography',    text:'DeKalb County · Metro Atlanta MSA'},
-    ]
-  },
-
-  waterfront: {
-    title: 'Waterfront Land',
-    subtitle: 'Central Georgia',
-    tag: 'Land · Pipeline',
-    stats: [
-      {label:'Type',     val:'Waterfront Land'},
-      {label:'Lots',     val:'7'},
-      {label:'Market',   val:'Central Georgia'},
-      {label:'Status',   val:'Land Hold'},
-      {label:'Strategy', val:'Long-Term Optionality'},
-    ],
-    body: `<p>Seven waterfront lots situated along a river corridor in Central Georgia. Currently held as a long-term land position with no immediate development timeline.</p>`,
-    hero: null,
-    photos: [],
-    gridCls: '',
-    side: [
-      {label:'Asset Class',  tags:['Land','Waterfront']},
-      {label:'Strategy',     text:'Long-term land hold, optionality asset.'},
-      {label:'Geography',    text:'Central Georgia'},
-    ]
-  },
-
-  hearthstone: {
-    title: 'Residential Subdivision',
-    subtitle: 'DeKalb County, GA',
-    tag: 'Subdivision · Completed',
-    stats: [
-      {label:'Type',      val:'Residential Subdivision'},
-      {label:'Units',     val:'23'},
-      {label:'Market',    val:'DeKalb County, GA'},
-      {label:'Initiated', val:'2019'},
-      {label:'Status',    val:'Completed'},
-      {label:'Role',      val:'Land Principal / Co-Developer'},
-    ],
-    body: `<p>A 23-home residential subdivision in the DeKalb County submarket — the same corridor where Madede's active Subdivision II project is now underway. Madede contributed as land principal and co-development partner, overseeing site planning and early-stage development in partnership with a residential builder.</p>`,
-    hero: 'assets/hearthstone/hero.jpg',
-    photos: [
-      {src:'assets/hearthstone/g1.jpg', cls:'ph-med'},
-      {src:'assets/hearthstone/g2.jpg', cls:'ph-med'},
-      {src:'assets/hearthstone/g3.jpg', cls:'ph-med ph-span2'},
-    ],
-    gridCls: 'pg-3',
-    side: [
-      {label:'Asset Class',  tags:['For-Sale Residential','Joint Venture']},
-      {label:'Role',         text:'Land principal and co-development partner. Site planning and early-stage development oversight.'},
-      {label:'Geography',    text:'DeKalb County · Metro Atlanta MSA'},
-    ]
-  },
-
-  sandywood: {
-    title: 'Residential Development',
-    subtitle: 'Gwinnett County, GA',
-    tag: 'Co-Development · Completed',
-    stats: [
-      {label:'Type',      val:'Residential Development'},
-      {label:'Units',     val:'4'},
-      {label:'Market',    val:'Gwinnett County, GA'},
-      {label:'Initiated', val:'2021'},
-      {label:'Status',    val:'Completed'},
-      {label:'Role',      val:'Capital Partner / Co-Developer'},
-    ],
-    body: `<p>A four-home residential development executed through a joint venture arrangement. Madede provided structured capital and active construction oversight, with returns distributed on a shared basis at completion.</p>`,
-    hero: 'assets/sandywood/hero.jpg',
-    photos: [
-      {src:'assets/sandywood/g1.jpg', cls:'ph-med'},
-      {src:'assets/sandywood/g2.jpg', cls:'ph-med'},
-      {src:'assets/sandywood/g3.jpg', cls:'ph-med ph-span2'},
-    ],
-    gridCls: 'pg-3',
-    side: [
-      {label:'Asset Class',  tags:['For-Sale Residential','Joint Venture']},
-      {label:'Strategy',     text:'Structured capital with shared-return disposition.'},
-      {label:'Geography',    text:'Gwinnett County · Metro Atlanta MSA'},
-    ]
-  },
-
-  '1740': {
-    title: 'Custom Residence',
-    subtitle: 'Northwest Atlanta, GA',
-    tag: 'Custom · Operational',
-    stats: [
-      {label:'Type',      val:'Custom Single-Family'},
-      {label:'Units',     val:'1'},
-      {label:'Market',    val:'Northwest Atlanta, GA'},
-      {label:'Initiated', val:'2022'},
-      {label:'Status',    val:'Operational'},
-      {label:'Strategy',  val:'Long-Term Rental'},
-    ],
-    body: `<p>A bespoke single-family residence developed on an infill land parcel in Northwest Atlanta. Acquired, developed, and currently operated as a long-term rental asset under direct ownership.</p>`,
-    hero: 'assets/1740/hero.jpg',
-    photos: [
-      {src:'assets/1740/g1.jpg', cls:'ph-med'},
-      {src:'assets/1740/g2.jpg', cls:'ph-med'},
-      {src:'assets/1740/g3.jpg', cls:'ph-med'},
-      {src:'assets/1740/g4.jpg', cls:'ph-med'},
-    ],
-    gridCls: 'pg-2',
-    side: [
-      {label:'Asset Class',  tags:['Custom Residential','Develop-to-Hold']},
-      {label:'Strategy',     text:'Direct ownership and long-term residential rental.'},
-      {label:'Geography',    text:'Northwest Atlanta · Metro Atlanta MSA'},
-    ]
-  },
-
-  or: {
-    title: 'Land Development',
-    subtitle: 'Pacific Northwest',
-    tag: 'Lending · Completed',
-    stats: [
-      {label:'Type',      val:'Structured Lending'},
-      {label:'Market',    val:'Pacific Northwest'},
-      {label:'Initiated', val:'2023'},
-      {label:'Status',    val:'Completed'},
-      {label:'Role',      val:'Capital Lender'},
-    ],
-    body: `<p>A structured capital position extended to an active land development project in the Pacific Northwest. Madede served as lender.</p>`,
-    hero: null,
-    photos: [],
-    gridCls: '',
-    side: [
-      {label:'Asset Class',  tags:['Structured Lending']},
-      {label:'Strategy',     text:'Capital lender position in third-party land development.'},
-      {label:'Geography',    text:'Pacific Northwest, U.S.'},
-    ]
-  },
-
-};
-
-/* ── RENDER DETAIL ── */
-function showDetail(id) {
-  const p = projects[id];
-  if (!p) return;
-
-  // build stats html
-  const statsHtml = p.stats.map(s =>
-    `<div class="stat"><div class="stat-label">${s.label}</div><div class="stat-val">${s.val}</div></div>`
-  ).join('');
-
-  // build hero
-  let heroHtml;
-  if (p.hero) {
-    heroHtml = `<div class="hero">
-      <img class="hero-img" src="${p.hero}" alt=""/>
-      <div class="hero-grad"></div>
-      <div class="hero-text">
-        <div class="hero-tag">${p.tag}</div>
-        <div class="hero-title">${p.title}</div>
-      </div>
-    </div>`;
-  } else {
-    heroHtml = `<div class="hero">
-      <div class="hero-placeholder"><span>No imagery available</span></div>
-      <div class="hero-grad"></div>
-      <div class="hero-text">
-        <div class="hero-tag">${p.tag}</div>
-        <div class="hero-title">${p.title}</div>
-      </div>
-    </div>`;
-  }
-
-  // build photo grid
-  let photoHtml = '';
-  if (p.photos && p.photos.length > 0) {
-    const tiles = p.photos.map(ph =>
-      `<div class="ph ${ph.cls}"><img src="${ph.src}" alt=""/></div>`
-    ).join('');
-    photoHtml = `<div class="photo-grid ${p.gridCls}">${tiles}</div>`;
-  }
-
-  // build sidebar
-  const sideHtml = p.side.map(s => {
-    let inner = '';
-    if (s.tags) inner = `<div class="side-tags">${s.tags.map(t=>`<div class="stag">${t}</div>`).join('')}</div>`;
-    else inner = `<p>${s.text}</p>`;
-    return `<div class="side-block"><h4>${s.label}</h4>${inner}</div>`;
-  }).join('');
-
-  document.getElementById('detail-content').innerHTML = `
-    ${heroHtml}
-    <div class="stats-bar">${statsHtml}</div>
-    <div class="detail-body">
-      <div class="detail-main">
-        ${p.body}
-        ${photoHtml}
-      </div>
-      <div class="detail-side">${sideHtml}</div>
-    </div>
-  `;
-
-  document.getElementById('view-list').classList.remove('active');
-  document.getElementById('view-detail').classList.add('active');
-  window.scrollTo(0,0);
-}
-
-function showList() {
-  document.getElementById('view-detail').classList.remove('active');
-  document.getElementById('view-list').classList.add('active');
-  window.scrollTo(0,0);
-}
-</script>
 <script src="main.js"></script>
 </body>
 </html>

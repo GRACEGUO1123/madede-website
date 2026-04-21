@@ -459,6 +459,14 @@ nav {
   max-width: 520px;
 }
 
+/* make anchor cards behave like block elements */
+a.card-img,
+a.card-text {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
 /* IMAGE CARD */
 .card-img {
   border: 1px solid var(--border);
