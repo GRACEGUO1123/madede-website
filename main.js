@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.footer-year').forEach(el => {
+    el.textContent = new Date().getFullYear();
+  });
   const hamburger = document.querySelector('.nav-hamburger');
   const navLinks = document.querySelector('.nav-links');
   if (!hamburger || !navLinks) return;
